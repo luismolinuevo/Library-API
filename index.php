@@ -1,10 +1,11 @@
 <?php
 
-// index.php
+require_once __DIR__ . '/dbconfig.php';
+$routes = require_once('routes.php');
+
+//get uri info
 $request_uri = $_SERVER["REQUEST_URI"];
 $request_method = $_SERVER['REQUEST_METHOD'];
-
-$routes = require_once('routes.php');
 
 // Extract route from URI
 $route = strtok($request_uri, '?');
