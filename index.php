@@ -1,11 +1,13 @@
 <?php
 
-require_once __DIR__ . '/dbconfig.php';
-$routes = require_once('routes.php');
+require_once __DIR__ . '/dbconfig.php'; //load up mysql connections
+$routes = require_once('routes.php'); //get the routes 
 
 //get uri info
 $request_uri = $_SERVER["REQUEST_URI"];
 $request_method = $_SERVER['REQUEST_METHOD'];
+
+var_dump($request_method . "<br>", $request_uri);
 
 // Extract route from URI
 $route = strtok($request_uri, '?');
