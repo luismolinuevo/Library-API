@@ -3,9 +3,9 @@
 class AuthorController {
     private $authorModel;
 
-    public function __construct() {
+    public function __construct(PDO $conn) {
         require_once __DIR__ . '/../models/AuthorModel.php';
-        $this->authorModel = new AuthorModel();
+        $this->authorModel = new AuthorModel($conn);
     }
 
     public function getAllAuthors() {

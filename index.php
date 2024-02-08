@@ -22,7 +22,7 @@ if (isset($routes[$method][$route])) { //geting object to see if that method exi
     require_once('controllers/' . $controllerName . '.php');
     // require_once __DIR__ . '/models/AuthorModel.php';
     // $controller = new $controllerName(new AuthorModel($conn)); 
-    $controller = new $controllerName();
+    $controller = new $controllerName($conn);
     $controller->$methodName();
 } else {
     var_dump($route);
