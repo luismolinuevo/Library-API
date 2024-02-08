@@ -1,10 +1,10 @@
 <?php
 
 return [
-    // 'GET' => [
-    //     '/authors' => 'index',
+    'GET' => [
+        '/author' => 'AuthorController@getAllBooks',
     //     '/authors/{id}' => 'show',
-    // ],
+    ],
     // 'POST' => [
     //     '/authors' => 'store',
     // ],

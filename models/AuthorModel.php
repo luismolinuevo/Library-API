@@ -1,10 +1,10 @@
 <?php
 
-class Book {
+class Author {
     private $conn;
     private $table = 'author';
 
-    public function __construct($db) {
+    public function __construct(PDO $db) {
         $this->conn = $db;
     }
 

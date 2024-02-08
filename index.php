@@ -18,7 +18,8 @@ $method = strtoupper($request_method);
 if (isset($routes[$method][$route])) { //geting object to see if that method exist for that route and then picks it
     list($controllerName, $methodName) = explode('@', $routes[$method][$route]);
     require_once('controllers/' . $controllerName . '.php');
-    $controller = new $controllerName();
+    $controller = new $controllerName(new BookModel($conn)); 
+    // $controller = new $controllerName();
     $controller->$methodName();
 } else {
     http_response_code(404);
