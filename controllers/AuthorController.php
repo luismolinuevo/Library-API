@@ -4,11 +4,11 @@ class AuthorController {
     private $authorModel;
 
     public function __construct() {
-        require_once 'AuthorModel.php';
+        require_once __DIR__ . '/../models/AuthorModel.php';
         $this->authorModel = new AuthorModel();
     }
 
-    public function getAllBooks() {
+    public function getAllAuthors() {
         try {
             $authors = $this->authorModel->getAllAuthors();
             http_response_code(200);

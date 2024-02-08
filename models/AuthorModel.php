@@ -1,6 +1,6 @@
 <?php
 
-class Author {
+class AuthorModel {
     private $conn;
     private $table = 'author';
 

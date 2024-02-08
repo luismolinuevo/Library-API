@@ -2,16 +2,16 @@
 
 return [
     'GET' => [
-        '/author' => 'AuthorController@getAllBooks',
+        '/LibraryAPI/author' => 'AuthorController@getAllAuthors',
     //     '/authors/{id}' => 'show',
     ],
-    // 'POST' => [
+    'POST' => [
     //     '/authors' => 'store',
-    // ],
-    // 'PUT' => [
+    ],
+    'PUT' => [
     //     '/authors/{id}' => 'update',
-    // ],
-    // 'DELETE' => [
+    ],
+    'DELETE' => [
     //     '/authors/{id}' => 'destroy',
-    // ],
+    ],
 ];
